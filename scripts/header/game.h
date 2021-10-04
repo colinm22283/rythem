@@ -1,9 +1,9 @@
 #pragma once
 
-#define MAP_DEBUG_MODE
-
-namespace Map
+namespace Game
 {
+    extern bool debugMode;
+
     extern bool playing;
     extern long position;
 

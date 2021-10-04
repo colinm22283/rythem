@@ -9,7 +9,7 @@
 #include "input.h"
 #include "consoleParser.h"
 #include "font.h"
-#include "map.h"
+#include "game.h"
 
 void Script::exit()
 {
@@ -27,10 +27,10 @@ void Script::update()
 {
     Render::clearScreen();
 
-    if (Engine::currentTime > 1000) Map::playing = true;
+    if (Engine::currentTime > 1000) Game::playing = true;
     //Console::print("Time: " + Engine::currentTime);
 
-    Map::update();
+    Game::update();
 }
 
 void Script::mouseDown(int button)
@@ -40,4 +40,12 @@ void Script::mouseDown(int button)
 void Script::mouseClick(int button)
 {
     
+}
+
+bool Script::consoleSet(std::string variable, std::string value)
+{
+    if (variable == "debugmode") Game::debugMode = value == "true" ? true : false;
+    else return false;
+
+    return true;
 }

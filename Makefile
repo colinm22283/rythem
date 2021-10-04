@@ -6,6 +6,6 @@ compile:
 run:
 	./rythem
 push:
-	git add ./header ./source ./scripts/header ./scripts/source ./README.md Makefile
+	git add ./header/*.h ./source/*.cpp ./scripts/header/*.h ./scripts/source/*.cpp ./README.md Makefile
 	git commit -a -m "First Commit"
 	git push origin main

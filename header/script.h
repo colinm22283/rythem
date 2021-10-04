@@ -10,4 +10,6 @@ namespace Script
     void mouseDown(int button);
     void mouseClick(int button);
     void exit();
+
+    bool consoleSet(std::string variable, std::string value);
 }
