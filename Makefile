@@ -7,5 +7,5 @@ run:
 	./rythem
 push:
 	git add ./header/*.h ./source/*.cpp ./scripts/header/*.h ./scripts/source/*.cpp ./README.md Makefile
-	git commit -a -m "First Commit"
+	git commit -a -m "Added main game mechanics"
 	git push origin main

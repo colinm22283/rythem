@@ -10,6 +10,7 @@
 #include "consoleParser.h"
 #include "font.h"
 #include "game.h"
+#include "map.h"
 
 void Script::exit()
 {
@@ -22,13 +23,13 @@ void Script::keyDown(SDL_Keysym keysym) { }
 
 void Script::start()
 {
+    Map::load("");
 }
 void Script::update()
 {
-    Render::clearScreen();
+    Render::clearScreen({ 255, 255, 255, 255 });
 
     if (Engine::currentTime > 1000) Game::playing = true;
-    //Console::print("Time: " + Engine::currentTime);
 
     Game::update();
 }
